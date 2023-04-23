@@ -8,6 +8,14 @@
         "simplesoftwareio/simple-qrcode": "dev-develop",
         "phpseclib/phpseclib": "~3.0"
     },
+    "keywords": [
+        "payment",
+        "azam pay",
+        "azam",
+        "vodacom",
+        "mpesa",
+        "zpay"
+    ],
     "license": "MIT",
     "autoload": {
         "psr-4": {
