@@ -16,10 +16,20 @@ Require this package in your composer.json and update composer. This will downlo
 
 ## Using
 
-You can create a new ZPAY instance and load it's functions or view name.
+### Get Session id
+
+You can create a new ZPAY instance and load it's functions to get session id.
 
 ```php
-    use Barryvdh\DomPDF\Facade\Pdf;
-    $pdf = Pdf::loadView('pdf.invoice', $data);
-    return $pdf->download('invoice.pdf');
+    use Saidtech\Zpay\Facades\Zpay;
+    $zpay = Zpay::getSession();
+    return $zpay;
+```
+
+### Make payment request
+
+```php
+    use Saidtech\Zpay\Facades\Zpay;
+    $zpay = Zpay::sendTransaction($payload, $session,$transactions);
+    return $zpay;
 ```
