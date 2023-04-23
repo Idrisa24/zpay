@@ -1,0 +1,34 @@
+{
+    "name": "saidtech/zpay",
+    "description": "This package is for making an online payments through mpesa and azam pay",
+    "type": "library",
+    "require": {
+        "php": "^7.4|^8.0",
+        "barryvdh/laravel-dompdf": "2.0.x-dev",
+        "simplesoftwareio/simple-qrcode": "dev-develop",
+        "phpseclib/phpseclib": "~3.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Saidtech\\Zpay\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Idrisa John",
+            "email": "idrisajohn19@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Saidtech\\Zpay\\Provider\\ZpayServiceProvider"
+            ],
+            "aliases": {
+                "zpay": "Saidtech\\Zpay\\Facades\\Zpay"
+            }
+        }
+    }
+}
